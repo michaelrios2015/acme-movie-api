@@ -1,10 +1,10 @@
 const { expect } = require('chai');
-// const { syncAndSeed } = require('../db');
+const { syncAndSeed } = require('../db');
 
 const app = require('supertest')(require('../app'));
 
 describe('Routes', ()=> {
-    // beforeEach(()=> syncAndSeed());
+    beforeEach(()=> syncAndSeed());
     describe('GET /', ()=> {
         it('show information about the api', async()=> {
             const response = await app.get('/');
