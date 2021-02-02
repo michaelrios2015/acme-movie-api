@@ -9,7 +9,7 @@ describe('Routes', ()=> {
         it('show information about the api', async()=> {
             const response = await app.get('/');
             expect(response.status).to.equal(200);
-            expect(response.text).to.include(':)')
+            expect(response.text).to.include(';)')
         })
     })
 })
